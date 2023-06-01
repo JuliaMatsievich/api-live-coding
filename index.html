@@ -37,11 +37,11 @@
 			})
 			.then((responseData) => {
 				tasks = responseData.todos;
-				renderTasks();
+				renderApp();
 			});
 	};
 
-	const renderTasks = () => {
+	const renderApp = () => {
 		const tasksHtml = tasks
 			.map((task) => {
 				return `
@@ -145,7 +145,7 @@
 				buttonElement.textContent = "Добавить";
 			});
 
-		renderTasks();
+		renderApp();
 	});
 
 		for (const deleteButton of deleteButtons) {
@@ -167,10 +167,10 @@
 					.then((responseData) => {
 						// Получили данные и рендерим их в приложении
 						tasks = responseData.todos;
-						renderTasks();
+						renderApp();
 					});
 
-				renderTasks();
+				renderApp();
 			});
 		}
 	};
