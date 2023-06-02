@@ -1,4 +1,4 @@
-
+//Документация к апи: https://github.com/GlebkaF/webdev-hw-api/blob/main/pages/api/v2/todos/README.md
 const host = "https://webdev-hw-api.vercel.app/api/v2/todos";
 
 export function getTodos( {token} ) {
@@ -56,6 +56,24 @@ export function loginUser( { login, password} ) {
 		.then((response) => {
 			if(response.status === 400) {
 				throw new Error('Неправильно введен логин или пароль')
+			}
+			return response.json();
+		})
+}
+
+
+export function registerUser( { login, password, name} ) {
+	return 	fetch("https://wedev-api.sky.pro/api/user", {
+		method: "POST",
+		body: JSON.stringify({
+			login,
+			password,
+			name
+		}),
+	})
+		.then((response) => {
+			if(response.status === 400) {
+				throw new Error('Такой пользователь уже существует')
 			}
 			return response.json();
 		})
