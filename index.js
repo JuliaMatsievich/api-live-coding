@@ -2,7 +2,6 @@
 import { getTodos, addTodo, deleteTodo } from "./api.js";
 import { renderLoginComponent } from "./components/login-component.js";
 
-
 let tasks = [];
 
 let token = null;

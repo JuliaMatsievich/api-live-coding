@@ -10,8 +10,6 @@ export function getTodos( {token} ) {
 	})
 		.then((response) => {
 			if (response.status === 401) {
-				// token = prompt("Введите верный пароль");
-				// fetchTodosAndRender();
 				throw new Error("Нет авторизации");
 			}
 			return response.json();

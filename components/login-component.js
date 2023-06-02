@@ -103,10 +103,6 @@ export function renderLoginComponent({ appEl, setToken, fetchTodosAndRender }) {
 					alert(error.message);
 				})
 			}
-
-
-
-		  
 		});
 	
 		document.getElementById("toggle-button").addEventListener("click", () => {
