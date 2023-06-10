@@ -1,4 +1,5 @@
 import { loginUser, registerUser } from "../api.js";
+//Импорт библиотеки lodash
 import _ from 'lodash';
 
 export function renderLoginComponent({ appEl, setToken, fetchTodosAndRender }) {
