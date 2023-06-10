@@ -27,6 +27,7 @@ export function addTodo( { text, token} ) {
 		},
 	})
 		.then((response) => {
+			console.log(response);
 			return response.json();
 		})
 }
